@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者ページ</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+
+    <script type="text/javascript" language="javascript">
+        function selectboxChange() {
+          target = document.getElementById("output");
+    
+          selindex = document.form1.name.selectedIndex;
+          switch (selindex) {
+            case 1:
+              target.innerHTML =
+              `<h2>新着情報：更新履歴</h2>
+
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+            case 2:
+              target.innerHTML =
+              `<h2>Q&A:更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+            case 3:
+              target.innerHTML =               
+              `<h2>もっと知りたい：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+            case 4:
+              target.innerHTML =              
+              `<h2>成長過程：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+            case 5:
+              target.innerHTML =               
+              `<h2>県内企業：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+            case 6:
+              target.innerHTML =               
+              `<h2>LINK：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+              case 7:
+              target.innerHTML =               
+              `<h2>記事追加：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+              case 8:
+              target.innerHTML =               
+              `<h2>タグ追加：更新履歴</h2>
+                <table border="1">
+                    <tr>
+                        <th width="5%">番号</th>
+                        <th width="15%">日付</th>
+                        <th width="20%">担当者</th>
+                        <th width="25%">タイトル</th>
+                        <th width="5%">状態</th>
+                        <th width="5%"><a>編集</a></th>
+                        <th width="5%">削除</th>
+                    </tr>
+                </table>`;
+              break;
+          }
+        }
+      </script>
+
+</head>
+<body id="container">
+    <div class="wrap">
+        <div class="log_inf">
+            <div>ログイン者名</div>
+            <a href="">ログアウト</a>
+        </div>
+        <form name="form1">
+            <select name="name" id="name" onchange="selectboxChange();">
+              <option value="メニュー">メニュー</option>
+              <option value="新着情報編集">新着情報</option>
+              <option value="Q&A編集">Q&A編集</option>
+              <option value="もっと知りたい編集">もっと知りたい編集</option>
+              <option value="成長過程編集">成長過程編集</option>
+              <option value="県内企業編集">県内企業編集</option>
+              <option value="LINK編集">LINK編集</option>
+              <option value="記事追加">記事追加</option>
+              <option value="タグ追加">タグ追加</option>
+            </select>
+          </form>
+          <section class="rireki">
+          <div id="output"></div>
+        </section>
+    </div>
+</body>
+</html>
